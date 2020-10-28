@@ -119,7 +119,9 @@
                                                                 <button type="button" class="dropdown-item copy-text" data-clipboard-text="{$subInfo["clashr"]}">复制 ClashR 订阅</button>
                                                                 <div class="dropdown-divider">
                                                                 </div>
+                                                         
                                                                 <button type="button" class="dropdown-item" href="##" onclick="importSublink('clashr')">一键导入 ClashR</button>
+                                                      
                                                             </div>
                                                         </div>
                                                         {/if}
