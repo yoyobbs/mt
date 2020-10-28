@@ -31,7 +31,7 @@ $_MT['pop_time']     = 1440;                          // 每次弹出间隔多�
 $_MT['pop_text'] = '
 <p class="text-danger font-weight-bold">如何防止网站被污染打不开？</p>
 <p class="text-muted font-weight-bold">
-收藏网址 <a href="https://url.com" target=”_blank”>https://url.com</a> (如果卡在英文界面进不去，请把网页翻译功能关闭重试)，点击第一个图标即可进入最新网站，后续如有更换域名也会优先更新此处链接<br>
+收藏网址 <a href="https://25ppc.com" target=”_blank”>https://25ppc.com</a> (如果卡在英文界面进不去，请把网页翻译功能关闭重试)，点击第一个图标即可进入最新网站，后续如有更换域名也会优先更新此处链接<br>
 </p>
 ';
 
@@ -40,7 +40,7 @@ $_MT['daily_bonus_mode'] = 'level';  // 签到的模式，sspanel: 为原版模�
 $_MT['daily_bonus_settings'] = [  // 为不同等级给不同的签到流量，仅在 daily_bonus_mode 为 level 时生效
     0 => [  // 用户等级
         'min' => 0,  // 最低流量，单位为MB
-        'max' => 999   // 最高流量，单位为MB
+        'max' => 10   // 最高流量，单位为MB
     ],
     1 => [
         'min' => 100,
@@ -67,15 +67,21 @@ $_MT['take_cash_enable']    = false;    // 非代理商(邀请注册页面)允�
 $_MT['take_account_type']   = [ '支付宝', 'USDT-ERC20', 'USDT-TRC20'];  // 设置提现账号时允许用户设置的账号类型, 可以以数组方式自行添加, 只是方便管理识别提现账号类型 没有其他作用
 
 #####  会员等级名称  --------------------------------------------------------------------------------------------
+/*
 $_MT['user_level'] = [      // 等级 => 对应的名称显示
    -1 => '暂未激活',
-    0 => '免费会员',
+    0 => '付费会员',
     1 => '青铜会员',
     2 => '白银会员',
     3 => '钻石会员',
 ];
+*/
+$_MT['user_level'] = [      // 等级 => 对应的名称显示
+   -1 => '暂未激活',
+    0 => '付费会员',
+];
 #####  用户注册  --------------------------------------------------------------------------------------------
-$_MT['register_code']               = false;          // true: 注册必须邀请码, false: 邀请码可不填 (admin面板 - 用户注册 - 将注册模式改为 invite)
+$_MT['register_code']               = true;          // true: 注册必须邀请码, false: 邀请码可不填 (admin面板 - 用户注册 - 将注册模式改为 invite)
 $_MT['register_restricted_email']   = true;      // 设置为true时，注册时必须使用指定的邮箱后缀;
 $_MT['list_of_available_mailboxes'] = [ '@qq.com', '@gmail.com', '@outlook.com', '@163.com', '@126.com', '@live.com', '@msn.com', '@yeah.net', '@foxmail.com', ];         // 注册邮箱可以使用的邮箱后缀,仅在上面设置为true时生效;
 $_MT['disable_mailbox_list']        = [ '@bcaoo.com', '@chacuo.net', '@tmpmail.net', '@tmail.ws', '@tmpmail.org', '@moimoi.re', '@bccto.me', '@027168.com', '@disbox.org', '@linshiyouxiang.net', '@t.odmail.cn', '@tmails.net', '@moakt.co', '@moakt.ws', '@disbox.net', '@bareed.ws', ];            // 注册邮箱禁止使用的邮箱后缀;
@@ -114,6 +120,7 @@ $_MT['nodes_filter'] = false;        // 开启订阅节点筛选
 $_MT['nodes_miniName'] = false;     // 允许用户开启节点正则匹配简化节点名称, 启用该选项需熟悉使用正则表达式
 $_MT['nodes_regex'] = '/\[(.*?)\]/';     // 节点筛选设置中节点名称缩短的正则表达式, 默认 [ ] 中的字符都会被移除
 # 主页订阅框显示哪些订阅     可选: ssr, v2ray, surge, clash, clashr, surfboard, kitsunebi, shadowrocket, quantumult, quantumultx,
+/*
 $_MT['index_sub'] = [
     'ssr',
     'v2ray',
@@ -126,8 +133,15 @@ $_MT['index_sub'] = [
     'quantumultx',
     'shadowrocket',
 ];
+*/
+$_MT['index_sub'] = [
+    'v2ray',
+    'clash',
+    'clashr',
+    'shadowrocket',
+];
 # 共享账号
-$_MT['shared_account_enable'] = true;       // 显示 共享账号 导航菜单 
+$_MT['shared_account_enable'] = false;       // 显示 共享账号 导航菜单 
 $_MT['shared_account'] = [
     'AppleID' => [  // 共享账号的类型, 不要改动这个字符
         'show' => true,    // 是否显示该类型共享账号
@@ -222,7 +236,7 @@ $_MT['shop_activity_text']     = '限时购买套餐, 过时不候';    //活动
 $_MT['shop_activity_id']       = 1;                         //活动套餐商品id
 $_MT['shop_activity_buy_time'] = '2020/03/15 00:00:00';     //活动截止购买时间, 到时间后套餐自动隐藏
 
-$_MT['shop_Experience_true']   = true;    // 是否显示试用套餐
+$_MT['shop_Experience_true']   = false;    // 是否显示试用套餐
 $_MT['shop_Experience_pos']    = 'top';    // 试用套餐卡片位置 top : 放于常规套餐前面, bottom : 放于常规套餐后面
 $_MT['shop_Experience_plan']   = [
     '试用 A' => 1,     // 一行一个试用套餐 ID, 可增加 可删除, 建议1-4个之间
@@ -235,7 +249,7 @@ $_MT['shop_Experience_plan']   = [
  * 商品的支持特性 直接编辑套餐的 [服务支持] 中填写,格式为   true-全球节点分布;false-快速客服响应   减号左边 true:代表支持 false:代表不支持 右边为文字, 以英文分号;隔开
  */
 $_MT['shop_plan'] = array(  
-    '青铜套餐' => array(                    //  对应商店显示的名称
+    '付费套餐' => array(                    //  对应商店显示的名称
         '描述' => array(  //  对应的商品描述, 目前取消了
             '月付' => 1,                   // 对应的商品ID
             '季度' => 2,
@@ -243,6 +257,7 @@ $_MT['shop_plan'] = array(
             '年付' => 4,
         ),
     ),
+/*
     '白银套餐' => array(            // 需要多个套餐可以自己复制array增加到下面
         '描述' => array(
             '月付' => 5,
@@ -250,21 +265,27 @@ $_MT['shop_plan'] = array(
             '年付' => 8,
         ),
     ),
+*/
 );
 
 # ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 # │                                              节点相关 设置                                                │
 # └──────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 $_MT['enable_webapi_email_hash'] = true;   // 节点webapi对接时 邮件地址进行md5加密
-$_MT['enable_node_traffic_rate'] = true;   // 是否显示节点的流量倍率
+$_MT['enable_node_traffic_rate'] = false;   // 是否显示节点的流量倍率
 $_MT['enable_online_user']       = true;   // 是否显示节点的在线人数
 $_MT['enable_node_load']         = true;   // 是否显示节点的负载
 $_MT['node_flag_mode']           = 'name';   // name: 从节点名字正则匹配地区(正则方法在.config.php国旗选项) info: 为从节点状态取值，在节点列表里编辑节点，填写节点状态为 us 则显示美国国旗。us这个是国家ISO 3166码，不懂就谷歌。
+/*
 $_MT['node_class_name']          = [   //  节点的等级对应的名字
-    0 => '公益节点',   // 格式为 节点等级 => 节点等级名字
+    0 => '付费节点',   // 格式为 节点等级 => 节点等级名字
     1 => '青铜节点',
     2 => '白银节点',
     3 => '钻石节点',
+];
+*/
+$_MT['node_class_name']          = [   //  节点的等级对应的名字
+    0 => '付费节点',   // 格式为 节点等级 => 节点等级名字
 ];
 
 # ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────┐
@@ -287,13 +308,23 @@ $_MT['Telegram_Payment'] = true;    // 用户充值提醒
  *    Windows 客户端  --------------------------------------------------------------------------------------------
  */
 $_MT['client_windows'] = [
-    'clash' => array(           // 一个array为一个客户端, 可以自行增加或删除
-        'name'  => 'Clash',      // 客户端名称
+    'v2rayn' => array(           // 一个array为一个客户端, 可以自行增加或删除
+        'name'  => 'V2rayN（64位）中文版',      // 客户端名称
         'img'   => $_MT['assets_url'].'/media/tutorial/android/clashr/clashr-ico.png',        // 图标, 使用png透明文件
-        'url'   => '/user/tutorial?os=Windows&client=Clash',      // 安装教程的url地址
-        'down'  => 'https://www.google.com',              // 教程页里的客户端下载地址
+        'url'   => '/user/tutorial?os=Windows&client=V2rayN',      // 安装教程的url地址
+        'down'  => 'https://ssrvps.org/wp-content/uploads/2020/04/v2rayN-Core.zip',              // 教程页里的客户端下载地址
         'vs'    => 'v0.10.0',     // 版本号
     ),
+/*
+    'clash' => array(           // 一个array为一个客户端, 可以自行增加或删除
+        'name'  => 'Clash中文',      // 客户端名称
+        'img'   => $_MT['assets_url'].'/media/tutorial/android/clashr/clashr-ico.png',        // 图标, 使用png透明文件
+        'url'   => '/user/tutorial?os=Windows&client=Clash',      // 安装教程的url地址
+        'down'  => 'https://onedrive.gimhoy.com/sharepoint/aHR0cHM6Ly91bml2ZXJzaXR5dG9uZ2ppLW15LnNoYXJlcG9pbnQuY24vOnU6L2cvcGVyc29uYWwvd3c5OTJfYWx1bW5pX3RvbmdqaV9lZHVfY24vRWFxNU9kQTNSMWhLcTF3Tk5vWkl0WUFCLVhUTjBINXB6NjFTOVJxUnVJY1AyQT9lPUk1RlZEbw==.zip',              // 教程页里的客户端下载地址
+        'vs'    => 'v0.10.0',     // 版本号
+    ),
+*/
+/*
     'sstap' => array(
         'name'  => 'SSTap',
         'img'   => $_MT['assets_url'].'/media/client-logos/sstap-ico.png',
@@ -301,6 +332,8 @@ $_MT['client_windows'] = [
         'down'  => 'https://www.google.com',
         'vs'    => 'v1.1.0.1',
     ),
+*/
+/*
     'ssr' => array(
         'name' => 'SSR',
         'img' => $_MT['assets_url'].'/media/client-logos/ssr-ico.png',
@@ -308,19 +341,31 @@ $_MT['client_windows'] = [
         'down'  => 'https://www.google.com',
         'vs'  => 'v1.0',
     ),
+*/
 ];
 
 /**
  *    Android 客户端  --------------------------------------------------------------------------------------------
  */
 $_MT['client_android'] = [
+    
+    'v2rayng' => array(
+        'name'  => 'V2rayNG安卓',
+        'img'   => $_MT['assets_url'].'/media/tutorial/android/clashr/clashr-ico.png',
+        'url'   => '/user/tutorial?os=Android&client=V2rayNG',
+        'down'  => 'https://tlanyan.me/download.php?filename=/v2/android/v2rayNG-v1.4.8-arm64.apk',
+        'vs'    => 'v1.1.15',
+    ),      
+    
     'clash' => array(
-        'name'  => 'Clash',
+        'name'  => 'Clash安卓',
         'img'   => $_MT['assets_url'].'/media/tutorial/android/clashr/clashr-ico.png',
         'url'   => '/user/tutorial?os=Android&client=Clash',
-        'down'  => 'https://www.google.com',
-        'vs'    => 'v0.10.0',
+        'down'  => 'https://cdn.jsdelivr.net/gh/xcxnig/ssr-download@master/clash-android.apk',
+        'vs'    => 'v1.4.8',
     ),
+    
+  
 ];
 
 /**
@@ -333,12 +378,14 @@ $_MT['client_ios'] = [
         'url'   => '/user/tutorial?os=iOS&client=Shadowrocket',
         'vs'    => 'v0.10.0',
     ),
+/*
     'Quantumult' => array(
         'name'  => 'Quantumult',
         'img'   => $_MT['assets_url'].'/media/client-logos/quantumult-ico.png',
         'url'   => '/user/tutorial?os=iOS&client=Quantumult',
         'vs'    => 'v1.1.0.1',
     ),
+*/
 ];
 # 教程页共享账号
 $_MT['ios_class']    = 2;    //iOS账户多少级以上可见(包括)
@@ -350,10 +397,10 @@ $_MT['ios_password'] = '';    //ios密码
  */
 $_MT['client_macos'] = [
     'clash' => array(
-        'name'  => 'Clash',
+        'name'  => 'ClashXR[支持v2,SSR,trojan!中文显示]',
         'img'   => $_MT['assets_url'].'/media/tutorial/android/clashr/clashr-ico.png',
         'url'   => '/user/tutorial?os=MacOS&client=Clash',
-        'down'  => 'https://www.google.com',
+        'down'  => 'https://cdn.jsdelivr.net/gh/xiaobai11223344/down@master/ClashXR.dmg',
         'vs'    => 'v0.10.0',
     ),
 ];
