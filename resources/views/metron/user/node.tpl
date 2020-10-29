@@ -75,7 +75,9 @@
                                                                 <ul class="list-unstyled user-details list-unstyled-border list-unstyled-noborder">
                                                                     <li class="media">
                                                                         {$region = substr($node['name'],0,6)}
+{if $dom_head === 0}                                                                      
                                                                         <img alt="image" class="mr-3 rounded-circle" width="50" src="{$metron['assets_url']}/media/flags{if $metron['node_flag_mode'] == 'name'}/1x1_zh_cn/{$node['flag']}{else}/1x1/{$node['status']}{/if}.svg">
+{/if}                                                                        
                                                                         <div class="media-body">
                                                                             <div class="media-title"><span class="label label-dot label-xl {if $node['online']=='1'}label-success{else}label-danger{/if}"></span> {$node['name']}</div>
                                                                             <div class=" text-job text-muted">{$node['info']}</div>
