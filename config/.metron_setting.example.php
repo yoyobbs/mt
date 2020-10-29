@@ -136,7 +136,6 @@ $_MT['index_sub'] = [
 */
 $_MT['index_sub'] = [
     'v2ray',
-    'clash',
     'clashr',
     'shadowrocket',
 ];
