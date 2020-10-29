@@ -53,7 +53,11 @@
                                                 <div class="row p-5">
                                                     <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
                                                         <p class="font-size-h1 pb-5"><strong>1. 下载客户端</strong></p>
-                                                        <a href="{$metron['client_android']['v2rayng']['down']}" class="btn btn-pill btn-v2ray copy-text">&nbsp;&nbsp;<i class="metron-clash text-white"></i>下载 V2rayNG 客户端</a>&nbsp;&nbsp;&nbsp;
+                                                        <div class="btn-group mb-3 mr-3">
+
+                                                          <a href="{$metron['client_android']['v2rayng']['down']}" class="btn btn-pill btn-v2ray copy-text">&nbsp;&nbsp;<i class="metron-clash text-white"></i>下载 V2rayNG 客户端</a>&nbsp;&nbsp;&nbsp;
+                                                       
+                                                        </div>
                                                         <p class="mb-2">下载客户端并进行安装</p>
                                                         <p class="mb-2">启动客户端并进行下面操作</p>
                                                     </div>
@@ -81,21 +85,6 @@
                                                         <div class="h6 pt-2">粘贴到软件的<code>左上角的“三”-->订阅设置，保存一下</code></div>
                                                         <div class="h6 pt-2">回到app首页，点击<code>右上角的“...”-->更新订阅</code></div>
                                                         <div class="h6 pt-2">选择一条线路，点右下角的“V”开关，就可以用了</div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png"/></a>
-                                                    </div>
-                                                </div>
-
-                                                <div class="separator separator-dashed separator-border-4"></div>
-
-                                                <div class="row p-5">
-                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
-                                                        <p class="font-size-h1 pb-5"><strong>3. 开启代理并选择节点</strong></p>
-                                                        <p class="mb-2">点击 <code>已停止</code> 按钮将状态切换至<code>运行中</code></p>
-                                                        <p class="mb-2">点击 <code>控制面板</code> 按钮进入节点配置界面</p>
-                                                        <p class="mb-2">根据规则设置节点即可</p>
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
                                                         <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png" data-lightbox="images">
