@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Clash 使用教程 &mdash; {$config["appName"]}</title>
+        <title>V2rayN 使用教程 &mdash; {$config["appName"]}</title>
         <link href="{$metron['assets_url']}/css/client/metron-icon.css" rel="stylesheet" type="text/css" />
         <link href="{$metron['assets_url']}/plugins/tutorial/lightbox/lightbox.min.css" rel="stylesheet" >
         {include file='include/global/head.tpl'}
@@ -14,7 +14,7 @@
                             <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
                                 <div class="d-flex align-items-center flex-wrap mr-2">
                                     <div class="d-flex flex-column">
-                                        <h2 class="text-white font-weight-bold my-2 mr-5">Clash for Windows 使用教程</h2>
+                                        <h2 class="text-white font-weight-bold my-2 mr-5">V2rayN for Windows 使用教程</h2>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center">
