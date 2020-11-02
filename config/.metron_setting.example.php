@@ -395,6 +395,14 @@ $_MT['ios_password'] = '';    //ios密码
  *    Apple Mac客户端  --------------------------------------------------------------------------------------------
  */
 $_MT['client_macos'] = [
+    'v2rayu' => array(
+        'name'  => 'V2rayU',
+        'img'   => $_MT['assets_url'].'/media/tutorial/android/clashr/clashr-ico.png',
+        'url'   => '/user/tutorial?os=MacOS&client=V2rayU',
+        'down'  => 'https://netfiles.pw/download.php?filename=/v2/macos/v2rayU-v2.3.1.dmg',
+        'vs'    => 'v2.3.1',
+    ),
+
     'clash' => array(
         'name'  => 'ClashXR[支持v2,SSR,trojan!中文显示]',
         'img'   => $_MT['assets_url'].'/media/tutorial/android/clashr/clashr-ico.png',
