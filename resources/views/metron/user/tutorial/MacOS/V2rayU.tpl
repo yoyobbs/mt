@@ -57,7 +57,7 @@
                                                 <div class="row p-5">
                                                     <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
                                                         <p class="font-size-h1 pb-5"><strong>1. 下载安装客户端</strong></p>
-                                                        <a href="{$metron['client_macos']['clash']['down']}" class="btn btn-pill btn-v2ray copy-text">&nbsp;&nbsp;<i class="metron-clash text-white"></i>下载 Clash 客户端</a>&nbsp;&nbsp;&nbsp;
+                                                        <a href="{$metron['client_macos']['v2ray']['down']}" class="btn btn-pill btn-v2ray copy-text">&nbsp;&nbsp;<i class="metron-clash text-white"></i>下载 Clash 客户端</a>&nbsp;&nbsp;&nbsp;
                                                         <p class="mb-2">下载并进行拖动安装</p>
                                                         <p class="mb-2">在启动台开启应用,如有弹窗务必点确定,有密码就输入</p>
                                                     </div>
@@ -72,67 +72,24 @@
                                                 <div class="row p-5">
                                                     <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
                                                         <p class="font-size-h1 pb-5"><strong>2. 设置订阅地址</strong></p>
-                                                        {if in_array('clash',$metron['index_sub'])}
+                                                        {if in_array('v2ray',$metron['index_sub'])}
                                                         <div class="btn-group mb-3 mr-3">
-                                                            <button type="button" class="btn btn-pill btn-clash dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;&nbsp;<i class="metron-clash text-white"></i>Clash 订阅配置&nbsp;&nbsp;</button>
-                                                            <div class="dropdown-menu">
-                                                                <button type="button" class="dropdown-item copy-text" data-clipboard-text="{$subInfo["clash"]}">复制 Clash 订阅</button>
-                                                                <div class="dropdown-divider">
-                                                                </div>
-                                                                <button type="button" class="dropdown-item" href="##" onclick="importSublink('clash')">一键导入 Clash</button>
-                                                            </div>
+
+                                                          <button type="button" class="btn btn-pill btn-v2ray copy-text" data-clipboard-text="{$subInfo["v2ray"]}"><i class="metron-v2rayng text-white"></i>&nbsp;&nbsp;复制 V2Ray 订阅&nbsp;&nbsp;</button>
+                                                            
                                                         </div>
                                                         {/if}
-                                                        {if in_array('clashr',$metron['index_sub'])}
-                                                        <div class="btn-group mb-3 mr-3">
-                                                            <button type="button" class="btn btn-pill btn-clash dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;&nbsp;<i class="metron-clash text-white"></i>ClashR 订阅配置&nbsp;&nbsp;</button>
-                                                            <div class="dropdown-menu">
-                                                                <button type="button" class="dropdown-item copy-text" data-clipboard-text="{$subInfo["clashr"]}">复制 ClashR 订阅</button>
-                                                                <div class="dropdown-divider">
-                                                                </div>
-                                                                <button type="button" class="dropdown-item" href="##" onclick="importSublink('clashr')">一键导入 ClashR</button>
-                                                            </div>
-                                                        </div>
-                                                        {/if}
-                                                        <p class="mb-2">点击上方按钮一键导入节点配置到Clash</p>
-                                                        <p class="mb-2">Config Name 填入 {$config["appName"]}</p>
-                                                        <p class="mb-2">点击确定，如果弹出配置错误信息，请重启Clash 后重试。(请确保您已购买套餐)</p>
+                                                        <p class="mb-2">点击上方<code>复制v2ray订阅</code></p>
+                                                        <p class="mb-2">粘贴到软件-订阅设置-<code>地址</code>，备注随便填写</p>
+                                                        <p class="mb-2">点击<code>添加</code>，再点<code>更新</code>。</p>
+                                                        <p class="mb-2">选择一条线路就可以用了</p>
                                                         <br />
 
-                                                        <div class="alert alert-custom alert-outline-primary fade show mb-5" role="alert">
-                                                            <div class="alert-icon">
-                                                                <i class="flaticon-warning"></i>
-                                                            </div>
-                                                            <div class="alert-text">
-                                                                <p class="mb-2">无法一键导入? 试试手动设置订阅</p>
-                                                                <p class="mb-2">依次点击 <code>配置</code> - <code>托管配置</code> - <code>管理</code> - <code>添加</code></p>
-                                                                <p class="mb-2">将订阅地址粘贴到 URL 一栏, Config Name 填入 {$config["appName"]} - 确定</p>
-                                                            </div>
-                                                            <div class="alert-close">
-                                                                <button type="button" class="close" data-dismiss="alert" aria-label="关">
-                                                                    <span aria-hidden="true">
-                                                                        <i class="ki ki-close"></i>
-                                                                    </span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
+
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
                                                         <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/mac/clashr/02.png" data-lightbox="images">
                                                         <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/mac/clashr/02.png"/></a>
-                                                    </div>
-                                                </div>
-
-                                                <div class="separator separator-dashed separator-border-4"></div>
-
-                                                <div class="row p-5">
-                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
-                                                        <p class="font-size-h1 pb-5"><strong>3. 开启代理</strong></p>
-                                                        <p class="mb-2">点击勾选 <code>设置为系统代理</code> 开启代理</p>
-                                                    </div>
-                                                    <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/mac/clashr/03.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/mac/clashr/03.png"/></a>
                                                     </div>
                                                 </div>
 
