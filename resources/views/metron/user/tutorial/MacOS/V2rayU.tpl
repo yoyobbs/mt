@@ -57,7 +57,7 @@
                                                 <div class="row p-5">
                                                     <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
                                                         <p class="font-size-h1 pb-5"><strong>1. 下载安装客户端</strong></p>
-                                                        <a href="{$metron['client_macos']['v2ray']['down']}" class="btn btn-pill btn-v2ray copy-text">&nbsp;&nbsp;<i class="metron-clash text-white"></i>下载 Clash 客户端</a>&nbsp;&nbsp;&nbsp;
+                                                        <a href="{$metron['client_macos']['v2rayu']['down']}" class="btn btn-pill btn-v2ray copy-text">&nbsp;&nbsp;<i class="metron-v2rayng text-white"></i>下载 V2rayU 客户端</a>&nbsp;&nbsp;&nbsp;
                                                         <p class="mb-2">下载并进行拖动安装</p>
                                                         <p class="mb-2">在启动台开启应用,如有弹窗务必点确定,有密码就输入</p>
                                                     </div>
