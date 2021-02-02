@@ -83,7 +83,7 @@
                                                         <!-- 结束 :: 订阅按钮 -->
                                                         <div class="h6 pt-2">点击上方按<code>复制V2ray订阅</code></div>
                                                         <div class="h6 pt-2">粘贴到软件的<code>左上角的“三”-->订阅设置，保存一下</code></div>
-                                                        <div class="h6 pt-2">点APP<code>左上角的“三”-->订阅-->预定义规则</code>，把<code>全局</code>改成<code>绕过局域网及大陆地址</code>，然后返回到app首页</div>
+                                                        <div class="h6 pt-2">点APP<code>左上角的“三”-->设置-->预定义规则</code>，把<code>全局</code>改成<code>绕过局域网及大陆地址</code>，然后返回到app首页</div>
                                                         <div class="h6 pt-2">回到app首页，点击<code>右上角的“...”-->更新订阅</code></div>
                                                         <div class="h6 pt-2">选择一条线路，点右下角的“V”开关，就可以用了</div>
                                                     </div>
