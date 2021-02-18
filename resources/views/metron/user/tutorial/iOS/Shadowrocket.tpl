@@ -150,7 +150,7 @@
                                                 </div>
 
                                                 <div class="separator separator-dashed separator-border-4"></div>
-
+<!-
                                                 <div class="row p-5">
                                                     <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
                                                         <p class="font-size-h1 pb-5"><strong>3. 添加规则配置</strong></p>
@@ -164,7 +164,7 @@
                                                         <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/03.png"/></a>
                                                     </div>
                                                 </div>
-
+->
                                                 <div class="separator separator-dashed separator-border-4"></div>
 
                                                 <div class="row p-5">
